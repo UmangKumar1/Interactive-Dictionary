@@ -15,7 +15,7 @@ def translate(word):
     if word in data:
         return data[word]
 #gets the closest word in the dictionary witht he get_close_match function and asks if that is the word you were looking for
-    elif get_close_matches(word,data.keys()) > 0:
+    elif len(get_close_matches(word,data.keys())) > 0:
         closeWord = get_close_matches(word,data.keys(), n = 10)[0]
         changeName = input("That is a not a word, are you sure you didnt mean:: " + closeWord + " ?? (Enter Y for yes/ N for no) :")
         if changeName == "Y":
